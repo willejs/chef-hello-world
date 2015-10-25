@@ -10,4 +10,3 @@ RSpec.configure do |c|
     c.sudo_password = ENV['SUDO_PASSWORD']
   end
 end
-

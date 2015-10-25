@@ -8,4 +8,3 @@ describe 'backupserv::default' do
     end.converge described_recipe
   end
 end
-
