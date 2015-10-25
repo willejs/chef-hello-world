@@ -1,0 +1,12 @@
+upstream backend  {
+<%- @backends.each do |backend| %>
+  server <%= backend %> max_fails=3  fail_timeout=5s;
+}
+<%- end %>
+server {
+  listen 80;
+  
+  location / {
+    proxy_pass  http://backend;
+  }
+}

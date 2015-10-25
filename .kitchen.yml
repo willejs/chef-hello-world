@@ -18,3 +18,4 @@ suites:
     run_list:
       - recipe[apt]
       - recipe[hello-world::default]
+      - recipe[hello-world::nginx]

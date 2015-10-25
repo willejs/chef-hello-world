@@ -9,7 +9,7 @@ RSpec.configure do |config|
     mocks.syntax = :should
   end
   # Specify the Chef log_level (default: :warn)
-  # config.log_level = :warn
+  config.log_level = :error
 
   # Specify the operating platform to mock Ohai data from
   config.platform = 'ubuntu'

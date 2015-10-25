@@ -19,4 +19,14 @@
 
 include_recipe 'nginx::default'
 
+template '/etc/nginx/sites-available/hello-world' do
+  source 'nginx/hello-world.erb'
+  owner node['nginx']['user']
+  group node['nginx']['group']
+  mode '0644'
+  variables(
+    backends: node['hello-world']['nginx']['backends']
+  )
+end
+
 nginx_site 'hello-world'
