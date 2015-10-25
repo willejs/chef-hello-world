@@ -1,7 +1,6 @@
 require_relative '../spec_helper'
 
 describe 'nginx' do
-
   # make sure the file that nginx enables is there.
   describe file('/etc/nginx/sites-enabled/hello-world') do
     it { should exist }
