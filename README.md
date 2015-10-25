@@ -24,10 +24,10 @@ TODO: List your supported platforms.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['hello-world']['root_dir']</tt></td>
+    <td><tt>['hello-world']['user']</tt></td>
     <td>String</td>
-    <td>The root directory of the application</td>
-    <td><tt>/opt/hello-world</tt></td>
+    <td>The user the binary is started as</td>
+    <td><tt>helloworld</tt></td>
   </tr>
   <tr>
     <td><tt>['hello-world']['package_location']</tt></td>
@@ -41,17 +41,23 @@ TODO: List your supported platforms.
     <td>The backend servers in the nginx config</td>
     <td><tt>github.com/willejs/go-hello-world</tt></td>
   </tr>
+  <tr>
+    <td><tt>['hello-world']['nginx']['backend_port']</tt></td>
+    <td>String</td>
+    <td>The port the backend is listening on and to proxy to</td>
+    <td><tt>8484</tt></td>
+  </tr>
 </table>
 
 ## Usage
-We use test kitchen to do everything, just run ```kitchen test```
-It will run the suites and verify that the service has started and perform the nessisary tests
+We use rake tasks to do everything, just run ```rake```
+It will lint the code, run unit & integration tests, then run the test suites and verify that the service has started. Finally a rake task performs the necessary tests to ensure it is round robin load balancing.
 
 ### hello-world::default
 This will simply install the go binary in the bin directory of the GOROOT and start the service under upstart.
 
 ### hello-world::nginx
-This will start a simple nginx instance and round robin proxy requests to the specified backends
+This will start a simple nginx instance and round robin proxy requests to the backends specified in the .kitchen.yml.
 
 
 ## License and Authors

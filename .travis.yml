@@ -11,3 +11,4 @@ install:
 script:
   - bin/berks install
   - bin/rake style
+  - bin/rake unit:spec

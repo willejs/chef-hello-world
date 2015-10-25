@@ -24,15 +24,25 @@ namespace :integration do
   desc 'Run integration tests with test-kitchen using vagrant'
   task :kitchen do
     require 'kitchen'
+    # this enabled concurrent kitchen runs.
     Kitchen.logger = Kitchen.default_file_logger
-    Kitchen::Config.new.instances.each(&:verify)
+    @loader = Kitchen::Loader::YAML.new(project_config: './.kitchen.yml')
+    config = Kitchen::Config.new(loader: @loader)
+    threads = []
+    config.instances.each do |instance|
+      threads << Thread.new do
+        instance.verify
+      end
+    end
+    threads.map(&:join)
   end
 end
 
 namespace :smoke do
   desc 'Ensure the system load balancing round robin'
   # this task is really hacky, this is not a representation of my ruby skills.
-  task :smoke do
+  # its basically just to demonstrate that the nodes are being rr'd
+  task :party do
     require 'httparty'
     results = []
     6.times do |_|
@@ -55,7 +65,7 @@ desc 'Run all style checks'
 task style: ['style:chef', 'style:ruby']
 
 # The default rake task should just run it all
-task default: %w(style unit:spec integration:kitchen smoke:smoke)
+task default: %w(style unit:spec integration:kitchen smoke:party)
 
 unless ENV['CI']
   begin
