@@ -25,8 +25,10 @@ template '/etc/nginx/sites-available/hello-world' do
   group node['nginx']['group']
   mode '0644'
   variables(
-    backends: node['hello-world']['nginx']['backends']
+    backends: node['hello-world']['nginx']['backends'],
+    backend_port: node['hello-world']['nginx']['backend_port']
   )
+  notifies :reload, 'service[nginx]', :immediately
 end
 
 nginx_site 'hello-world'

@@ -6,7 +6,7 @@ driver_config:
   require_chef_omnibus: 12.4.1
 
 provisioner:
-  # chef zero is an in memory feature complete chef server, instead of hacky chef solo
+  # chef zero is an in memory feature complete chef server, its preferred by many over chef solo in testing
   name: chef_zero
 
 platforms:
@@ -19,3 +19,33 @@ suites:
       - recipe[apt]
       - recipe[hello-world::default]
       - recipe[hello-world::nginx]
+
+  - name: node-1
+    run_list:
+      - recipe[apt]
+      - recipe[hello-world::default]
+    driver:
+      network:
+        - ["private_network", {ip: "10.10.0.11"}]
+
+  - name: node-2
+    run_list:
+      - recipe[apt]
+      - recipe[hello-world::default]
+    driver:
+      network:
+        - ["private_network", {ip: "10.10.0.12"}]
+
+  - name: lb-1
+    run_list:
+      - recipe[apt]
+      - recipe[hello-world::nginx]
+    driver:
+      network:
+        - ["private_network", {ip: "10.10.0.13"}]
+    attributes:
+      hello-world:
+        nginx:
+          backends:
+            - 10.10.0.11
+            - 10.10.0.12

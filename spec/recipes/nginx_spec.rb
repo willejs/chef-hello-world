@@ -12,5 +12,7 @@ describe 'hello-world::nginx' do
 
   it 'creates the hello-world nginx site config file' do
     expect(chef_run).to create_template('/etc/nginx/sites-available/hello-world')
+    resource = chef_run.template('/etc/nginx/sites-available/hello-world')
+    expect(resource).to notify('service[nginx]').to(:restart).immidiately
   end
 end
