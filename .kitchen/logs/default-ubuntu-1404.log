@@ -1,0 +1,42 @@
+I, [2015-10-25T12:50:42.152643 #20949]  INFO -- default-ubuntu-1404: -----> Setting up <default-ubuntu-1404>...
+I, [2015-10-25T12:50:42.153901 #20949]  INFO -- default-ubuntu-1404: Finished setting up <default-ubuntu-1404> (0m0.00s).
+I, [2015-10-25T12:50:42.153992 #20949]  INFO -- default-ubuntu-1404: -----> Verifying <default-ubuntu-1404>...
+I, [2015-10-25T12:50:42.155314 #20949]  INFO -- default-ubuntu-1404: Preparing files for transfer
+I, [2015-10-25T12:50:42.407742 #20949]  INFO -- default-ubuntu-1404: -----> Installing Busser (busser)
+I, [2015-10-25T12:50:50.091907 #20949]  INFO -- default-ubuntu-1404: Fetching: thor-0.19.0.gemFetching: thor-0.19.0.gem ( 18%)Fetching: thor-0.19.0.gem ( 35%)Fetching: thor-0.19.0.gem ( 53%)Fetching: thor-0.19.0.gem ( 71%)Fetching: thor-0.19.0.gem ( 89%)Fetching: thor-0.19.0.gem (100%)Fetching: thor-0.19.0.gem (100%)
+I, [2015-10-25T12:50:50.141283 #20949]  INFO -- default-ubuntu-1404: Successfully installed thor-0.19.0
+I, [2015-10-25T12:50:50.348618 #20949]  INFO -- default-ubuntu-1404: Fetching: busser-0.7.1.gemFetching: busser-0.7.1.gem ( 64%)Fetching: busser-0.7.1.gem (100%)Fetching: busser-0.7.1.gem (100%)
+I, [2015-10-25T12:50:50.369596 #20949]  INFO -- default-ubuntu-1404: Successfully installed busser-0.7.1
+I, [2015-10-25T12:50:50.370229 #20949]  INFO -- default-ubuntu-1404: 2 gems installed
+I, [2015-10-25T12:50:50.627450 #20949]  INFO -- default-ubuntu-1404: -----> Setting up Busser
+I, [2015-10-25T12:50:50.627747 #20949]  INFO -- default-ubuntu-1404: Creating BUSSER_ROOT in /tmp/verifier
+I, [2015-10-25T12:50:50.628103 #20949]  INFO -- default-ubuntu-1404: Creating busser binstub
+I, [2015-10-25T12:50:50.635993 #20949]  INFO -- default-ubuntu-1404: Installing Busser plugins: busser-serverspec
+I, [2015-10-25T12:50:59.903320 #20949]  INFO -- default-ubuntu-1404: Plugin serverspec installed (version 0.5.7)
+I, [2015-10-25T12:50:59.907690 #20949]  INFO -- default-ubuntu-1404: -----> Running postinstall for serverspec plugin
+I, [2015-10-25T12:51:01.473571 #20949]  INFO -- default-ubuntu-1404: Suite path directory /tmp/verifier/suites does not exist, skipping.
+I, [2015-10-25T12:51:01.480694 #20949]  INFO -- default-ubuntu-1404: Transferring files to <default-ubuntu-1404>
+I, [2015-10-25T12:51:01.719957 #20949]  INFO -- default-ubuntu-1404: -----> Running serverspec test suite
+I, [2015-10-25T12:51:01.727895 #20949]  INFO -- default-ubuntu-1404: -----> Installing Serverspec..
+I, [2015-10-25T12:51:09.994510 #20949]  INFO -- default-ubuntu-1404: Fetching: sfl-2.2.gemFetching: sfl-2.2.gem (100%)Fetching: sfl-2.2.gem (100%)
+I, [2015-10-25T12:51:10.476307 #20949]  INFO -- default-ubuntu-1404: Fetching: net-telnet-0.1.1.gemFetching: net-telnet-0.1.1.gem ( 93%)Fetching: net-telnet-0.1.1.gem (100%)Fetching: net-telnet-0.1.1.gem (100%)
+I, [2015-10-25T12:51:10.936849 #20949]  INFO -- default-ubuntu-1404: Fetching: net-ssh-2.9.2.gemFetching: net-ssh-2.9.2.gem (  9%)Fetching: net-ssh-2.9.2.gem ( 19%)Fetching: net-ssh-2.9.2.gem ( 28%)Fetching: net-ssh-2.9.2.gem ( 37%)Fetching: net-ssh-2.9.2.gem ( 46%)Fetching: net-ssh-2.9.2.gem ( 55%)Fetching: net-ssh-2.9.2.gem ( 65%)Fetching: net-ssh-2.9.2.gem ( 74%)Fetching: net-ssh-2.9.2.gem ( 83%)Fetching: net-ssh-2.9.2.gem ( 92%)Fetching: net-ssh-2.9.2.gem (100%)Fetching: net-ssh-2.9.2.gem (100%)
+I, [2015-10-25T12:51:11.360139 #20949]  INFO -- default-ubuntu-1404: Fetching: net-scp-1.2.1.gemFetching: net-scp-1.2.1.gem ( 48%)Fetching: net-scp-1.2.1.gem ( 98%)Fetching: net-scp-1.2.1.gem (100%)Fetching: net-scp-1.2.1.gem (100%)
+I, [2015-10-25T12:51:11.836068 #20949]  INFO -- default-ubuntu-1404: Fetching: specinfra-2.44.1.gemFetching: specinfra-2.44.1.gem ( 22%)Fetching: specinfra-2.44.1.gem ( 45%)Fetching: specinfra-2.44.1.gem ( 67%)Fetching: specinfra-2.44.1.gem ( 90%)Fetching: specinfra-2.44.1.gem (100%)Fetching: specinfra-2.44.1.gem (100%)
+I, [2015-10-25T12:51:12.332735 #20949]  INFO -- default-ubuntu-1404: Fetching: multi_json-1.11.2.gemFetching: multi_json-1.11.2.gem ( 63%)Fetching: multi_json-1.11.2.gem (100%)Fetching: multi_json-1.11.2.gem (100%)
+I, [2015-10-25T12:51:12.713926 #20949]  INFO -- default-ubuntu-1404: Fetching: diff-lcs-1.2.5.gemFetching: diff-lcs-1.2.5.gem ( 32%)Fetching: diff-lcs-1.2.5.gem ( 66%)Fetching: diff-lcs-1.2.5.gem ( 99%)Fetching: diff-lcs-1.2.5.gem (100%)Fetching: diff-lcs-1.2.5.gem (100%)
+I, [2015-10-25T12:51:13.099399 #20949]  INFO -- default-ubuntu-1404: Fetching: rspec-support-3.3.0.gemFetching: rspec-support-3.3.0.gem ( 55%)Fetching: rspec-support-3.3.0.gem (100%)Fetching: rspec-support-3.3.0.gem (100%)
+I, [2015-10-25T12:51:13.551015 #20949]  INFO -- default-ubuntu-1404: Fetching: rspec-expectations-3.3.1.gemFetching: rspec-expectations-3.3.1.gem ( 22%)Fetching: rspec-expectations-3.3.1.gem ( 44%)Fetching: rspec-expectations-3.3.1.gem ( 67%)Fetching: rspec-expectations-3.3.1.gem ( 89%)Fetching: rspec-expectations-3.3.1.gem (100%)Fetching: rspec-expectations-3.3.1.gem (100%)
+I, [2015-10-25T12:51:14.054693 #20949]  INFO -- default-ubuntu-1404: Fetching: rspec-core-3.3.2.gemFetching: rspec-core-3.3.2.gem ( 12%)Fetching: rspec-core-3.3.2.gem ( 23%)Fetching: rspec-core-3.3.2.gem ( 35%)Fetching: rspec-core-3.3.2.gem ( 47%)Fetching: rspec-core-3.3.2.gem ( 59%)Fetching: rspec-core-3.3.2.gem ( 71%)Fetching: rspec-core-3.3.2.gem ( 82%)Fetching: rspec-core-3.3.2.gem ( 94%)Fetching: rspec-core-3.3.2.gem (100%)Fetching: rspec-core-3.3.2.gem (100%)
+I, [2015-10-25T12:51:14.479101 #20949]  INFO -- default-ubuntu-1404: Fetching: rspec-its-1.2.0.gemFetching: rspec-its-1.2.0.gem (100%)Fetching: rspec-its-1.2.0.gem (100%)
+I, [2015-10-25T12:51:14.941228 #20949]  INFO -- default-ubuntu-1404: Fetching: rspec-mocks-3.3.2.gemFetching: rspec-mocks-3.3.2.gem ( 21%)Fetching: rspec-mocks-3.3.2.gem ( 43%)Fetching: rspec-mocks-3.3.2.gem ( 65%)Fetching: rspec-mocks-3.3.2.gem ( 87%)Fetching: rspec-mocks-3.3.2.gem (100%)Fetching: rspec-mocks-3.3.2.gem (100%)
+I, [2015-10-25T12:51:15.416055 #20949]  INFO -- default-ubuntu-1404: Fetching: rspec-3.3.0.gemFetching: rspec-3.3.0.gem (100%)Fetching: rspec-3.3.0.gem (100%)
+I, [2015-10-25T12:51:15.870778 #20949]  INFO -- default-ubuntu-1404: Fetching: serverspec-2.24.1.gemFetching: serverspec-2.24.1.gem ( 43%)Fetching: serverspec-2.24.1.gem ( 89%)Fetching: serverspec-2.24.1.gem (100%)Fetching: serverspec-2.24.1.gem (100%)
+I, [2015-10-25T12:51:15.935395 #20949]  INFO -- default-ubuntu-1404: -----> serverspec installed (version 2.24.1)
+I, [2015-10-25T12:51:16.061702 #20949]  INFO -- default-ubuntu-1404: /opt/chef/embedded/bin/ruby -I/tmp/verifier/suites/serverspec -I/tmp/verifier/gems/gems/rspec-support-3.3.0/lib:/tmp/verifier/gems/gems/rspec-core-3.3.2/lib /opt/chef/embedded/bin/rspec --pattern /tmp/verifier/suites/serverspec/\*\*/\*_spec.rb --color --format documentation --default-path /tmp/verifier/suites/serverspec
+I, [2015-10-25T12:51:16.416497 #20949]  INFO -- default-ubuntu-1404: No examples found.
+I, [2015-10-25T12:51:16.417402 #20949]  INFO -- default-ubuntu-1404: 
+I, [2015-10-25T12:51:16.418077 #20949]  INFO -- default-ubuntu-1404: Finished in 0.0003 seconds (files took 0.32202 seconds to load)
+I, [2015-10-25T12:51:16.418476 #20949]  INFO -- default-ubuntu-1404: [32m0 examples, 0 failures[0m
+I, [2015-10-25T12:51:16.418756 #20949]  INFO -- default-ubuntu-1404: 
+I, [2015-10-25T12:51:16.449943 #20949]  INFO -- default-ubuntu-1404: Finished verifying <default-ubuntu-1404> (0m34.29s).

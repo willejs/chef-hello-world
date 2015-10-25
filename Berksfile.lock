@@ -1,0 +1,7 @@
+DEPENDENCIES
+  hello-world
+    path: .
+    metadata: true
+
+GRAPH
+  hello-world (0.1.0)

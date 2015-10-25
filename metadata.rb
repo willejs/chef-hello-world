@@ -1,0 +1,7 @@
+name             'hello-world'
+maintainer       'Will Salt'
+maintainer_email 'williamejsalt@gmail.com'
+license          'Apache 2.0'
+description      'Installs/Configures hello-world'
+long_description 'Installs/Configures hello-world'
+version          '0.1.0'

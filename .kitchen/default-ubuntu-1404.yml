@@ -1,0 +1,6 @@
+---
+hostname: 127.0.0.1
+port: '2200'
+username: vagrant
+ssh_key: "/Users/will/repos/chef-hello-world/.kitchen/kitchen-vagrant/kitchen-chef-hello-world-default-ubuntu-1404/.vagrant/machines/default/virtualbox/private_key"
+last_action: verify

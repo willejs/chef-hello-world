@@ -1,0 +1,19 @@
+---
+driver:
+  name: vagrant
+driver_config:
+  # we want to explicitly set the chef version
+  require_chef_omnibus: 12.4.1
+
+provisioner:
+  # chef zero is an in memory feature complete chef server, instead of hacky chef solo
+  name: chef_zero
+
+platforms:
+  # 14.04 is the latest LTS
+  - name: ubuntu-14.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[hello-world::default]
