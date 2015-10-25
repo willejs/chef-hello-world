@@ -3,6 +3,7 @@
 source 'https://rubygems.org'
 
 gem 'berkshelf'
+gem 'httparty'
 
 if ENV['CI']
   gem 'serverspec', '>= 2.0'
