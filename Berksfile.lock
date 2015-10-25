@@ -1,7 +1,30 @@
 DEPENDENCIES
+  apt
   hello-world
     path: .
     metadata: true
 
 GRAPH
+  apt (2.9.1)
+  bluepill (2.4.0)
+    rsyslog (>= 0.0.0)
+  build-essential (2.2.4)
+  golang (1.7.0)
   hello-world (0.1.0)
+    golang (= 1.7.0)
+    nginx (= 2.7.6)
+  nginx (2.7.6)
+    apt (~> 2.2)
+    bluepill (~> 2.3)
+    build-essential (~> 2.0)
+    ohai (~> 2.0)
+    runit (~> 1.2)
+    yum-epel (~> 0.3)
+  ohai (2.0.3)
+  packagecloud (0.1.0)
+  rsyslog (2.2.0)
+  runit (1.7.4)
+    packagecloud (>= 0.0.0)
+  yum (3.8.1)
+  yum-epel (0.6.3)
+    yum (~> 3.2)

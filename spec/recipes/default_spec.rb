@@ -24,5 +24,4 @@ describe 'hello-world::default' do
     expect(chef_run).to enable_service('hello-world')
     expect(chef_run).to start_service('hello-world')
   end
-
 end
