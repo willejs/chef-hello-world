@@ -7,5 +7,5 @@ long_description 'Installs/Configures hello-world'
 version '0.1.0'
 
 # I dont trust community cookbooks obeying the semver standard.
-depends 'golang', '= 1.7.0'
+depends 'docker', '= 2.1.20'
 depends 'nginx', '= 2.7.6'
