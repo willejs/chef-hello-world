@@ -1,23 +1,13 @@
 require_relative '../spec_helper'
 
 describe 'default' do
+  # ensure that the docker service has started
+  describe service('docker') do
+    it { should be_running }
+  end
+
   # check that the bin has successfully compiled
-  describe file('/opt/go/bin/go-hello-world') do
-    it { should exist }
-  end
-
-  # check that the upstart config exists
-  describe file('/etc/init/hello-world.conf') do
-    it { should exist }
-  end
-
-  # check the user has been created
-  describe user('helloworld') do
-    it { should exist }
-  end
-
-  # ensure that the service has started
-  describe service('hello-world') do
+  describe docker_container('hello-world') do
     it { should be_running }
   end
 

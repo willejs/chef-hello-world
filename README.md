@@ -30,12 +30,6 @@ TODO: List your supported platforms.
     <td><tt>helloworld</tt></td>
   </tr>
   <tr>
-    <td><tt>['hello-world']['package_location']</tt></td>
-    <td>String</td>
-    <td>The golang package location</td>
-    <td><tt>github.com/willejs/go-hello-world</tt></td>
-  </tr>
-  <tr>
     <td><tt>['hello-world']['nginx']['backends']</tt></td>
     <td>Array</td>
     <td>The backend servers in the nginx config</td>
