@@ -47,9 +47,9 @@ namespace :smoke do
     results = []
     6.times do |_|
       # not catching exceptions or analysing the response, very bad.
-      response_node = HTTParty.get('http://10.10.0.13').body.match(/node-\d/)[0]
+      response_node = HTTParty.get('http://10.10.0.13').body.match(/from (.*)!/)[1]
       results << response_node
-      puts "response from #{response_node}"
+      puts "response from docker container: #{response_node}"
     end
     # this isnt an effective way to check if the nodes are actually being round robin load balanced.
     # but its terse and good enough.
